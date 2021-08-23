@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1082370981450",
+    "project_id": "transitter-df1d2",
+    "storage_bucket": "transitter-df1d2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1082370981450:android:1f0d498443167ccbbcf0b3",
+        "android_client_info": {
+          "package_name": "com.transitter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1082370981450-6b5btmp1dif7mva8cp0ghunrv4duo9em.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxKnTTgwgSUJoO8T30xyfOnNF6SaIKlzE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1082370981450-6b5btmp1dif7mva8cp0ghunrv4duo9em.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

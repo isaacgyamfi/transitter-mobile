@@ -1,0 +1,39 @@
+{
+  "data": [
+    {
+      "place_id": "ChIJRTzWqlaE3w8RpkKzhvPtbmg",
+      "name": "Atomi Taxi Station",
+      "types": ["taxi_stand", "point_of_interest", "establishment"],
+      "vicinity": "Accra",
+      "photos": [],
+      "geometry": {
+        "location": {
+          "lat": 5.609151899999999,
+          "lng": -0.1074171
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 5.610570980291501,
+            "lng": -0.106009719708498
+          },
+          "southwest": {
+            "lat": 5.607873019708498,
+            "lng": -0.108707680291502
+          }
+        }
+      },
+      "routes": [
+        {
+          "stop": {"name": "Legon 1st", "type": "bus stop"},
+          "geometry": {
+            "location": {
+              "lat": 342,
+              "lng": 2.463
+            }
+          },
+          "fare": "1.5"
+        }
+      ]
+    }
+  ]
+}

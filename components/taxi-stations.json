@@ -1,0 +1,889 @@
+{
+  "html_attributions": [],
+  "next_page_token": "Aap_uEDf3dvqn82z5ybxDrg2tN-Y_df-P7Imyh5rZf2dQZXVdy5Jro5CsPcsIBCy9Cc1OwNEUWhYuAg1JBZRu3xwKrsDXYILmpHudYd4gFc9Io68w02ea2klAJu6ld_9kZGdkbyVuDtF9hOXbYfNt6oAonX0JE6TWI_ELSVV9zPdsyYrd2zh8t4J4bWnWAVSHIZmPMIHqZmUyVx2qfIka3oCSlE_LHCKgj3-tE-efyoJ-nT3Gma9lSIHWYSMcEZwI9eWiM52xP3fbDa2bwgPPgVWbGPO2v7fuXwij35J0ua-BwOPNTwHVjSGAv7keBSQy1lB3udCrrDd6Q-g_35Md8jd61UV2A7jaYZ3b9kbY9Fjmbn9uEIqOU3S3PgAi356c_IVhwTjCThPUd5aU3bBEwqWcNbTC75wCs7cVDhHDLpJiuCGmsMogUJsxazDQRiM",
+  "results": [
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 5.609151899999999,
+          "lng": -0.1074171
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 5.610570980291501,
+            "lng": -0.106009719708498
+          },
+          "southwest": {
+            "lat": 5.607873019708498,
+            "lng": -0.108707680291502
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+      "name": "Century Road Last Stop",
+      "photos": [
+        {
+          "height": 1920,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112485821258554884677\">Augustine Baidoo</a>"
+          ],
+          "photo_reference": "Aap_uEABgQ1S_USPacq3gCL4gYI-Fnqx2WyuppOAvGoevS_qYai_1cuYc7Z7v6g4CtAbSLGIMcGuwXvyYzo1dwQc70J3PRXkIIiWobvWnbnk9ZoJFXGv9W4P5G9zziPLcCJBUM50udr8YxKfS9qAj_tSKrQv8K2t-OJUOThJBtoC3yJhLEdC",
+          "width": 1088
+        }
+      ],
+      "place_id": "ChIJRTzWqlaE3w8RpkKzhvPtbmg",
+      "rating": 3.4,
+      "reference": "ChIJRTzWqlaE3w8RpkKzhvPtbmg",
+      "scope": "GOOGLE",
+      "types": [
+        "taxi_stand",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 38,
+      "vicinity": "JV5V+M28, Accra"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 5.6494647,
+          "lng": -0.1794245
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 5.650789830291504,
+            "lng": -0.178159569708498
+          },
+          "southwest": {
+            "lat": 5.648091869708499,
+            "lng": -0.180857530291502
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+      "name": "Legon Taxi Stand",
+      "photos": [
+        {
+          "height": 768,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100110854325651602585\">EDWARD ATUKWEI KORLEY</a>"
+          ],
+          "photo_reference": "Aap_uEDgR5gYN40dTnF295kvx0bC92V43D1uAea1DVwSdXGNdxAobd1JQOMUwnzPRD69tlJ2oUENU7h2JgfWuDseZT4C220vEZXjHSc7gBy9tIS_1Niael_xh4heyPgmUeTzqakzblqrtbHmX8z3Pte8bnETjqDgEw8EKgdYBbxI1xOJaFeH",
+          "width": 1024
+        }
+      ],
+      "place_id": "ChIJxacEEoOc3w8RXa6sRMgedZA",
+      "plus_code": {
+        "compound_code": "JRXC+Q6 Accra, Ghana",
+        "global_code": "6CQXJRXC+Q6"
+      },
+      "rating": 3.8,
+      "reference": "ChIJxacEEoOc3w8RXa6sRMgedZA",
+      "scope": "GOOGLE",
+      "types": [
+        "taxi_stand",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 8,
+      "vicinity": "Legon East Road, Accra"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 5.6625652,
+          "lng": -0.1814384
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 5.663942880291502,
+            "lng": -0.180089619708498
+          },
+          "southwest": {
+            "lat": 5.661244919708497,
+            "lng": -0.182787580291502
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+      "name": "Taxi Rank",
+      "place_id": "ChIJ41JP7nCd3w8R9ieAwIZifS0",
+      "plus_code": {
+        "compound_code": "MR79+2C Accra, Ghana",
+        "global_code": "6CQXMR79+2C"
+      },
+      "reference": "ChIJ41JP7nCd3w8R9ieAwIZifS0",
+      "scope": "GOOGLE",
+      "types": [
+        "taxi_stand",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Unnamed Road, Accra"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 5.640959899999999,
+          "lng": -0.178952
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 5.642142380291503,
+            "lng": -0.177585219708498
+          },
+          "southwest": {
+            "lat": 5.639444419708498,
+            "lng": -0.180283180291502
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+      "name": "Legon Taxi Station",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 4032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102360937438580121599\">Seth Manford</a>"
+          ],
+          "photo_reference": "Aap_uEC7OkwdBYg5h5e9swL0LY68aH02ki5j_yjzET1PcBFRC9Df0iYVtStM9t9yaV6Ca5q4l84XMgRWgjqvUjsCgRi5c3fd6DbGHFr_6IxHU-ptHoM6wMKJK0OqIdmb_Qwl89mPX9q83qFgIy9bjR6YaXF-7LK8hp6r-3tyPxr9kCnt2T7t",
+          "width": 3024
+        }
+      ],
+      "place_id": "ChIJzRsQmXyb3w8R2y1TXFwIbBk",
+      "rating": 3.7,
+      "reference": "ChIJzRsQmXyb3w8R2y1TXFwIbBk",
+      "scope": "GOOGLE",
+      "types": [
+        "taxi_stand",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 10,
+      "vicinity": "JRRC+9CM, Accra"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 5.6405041,
+          "lng": -0.1774926
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 5.641997980291501,
+            "lng": -0.176160669708498
+          },
+          "southwest": {
+            "lat": 5.639300019708497,
+            "lng": -0.178858630291502
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+      "name": "Okponglo Taxi Rank",
+      "photos": [
+        {
+          "height": 4160,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/107252418734290072325\">exi bou</a>"
+          ],
+          "photo_reference": "Aap_uEBUs5RDsatkhw5tZjUzwfNQfKveC1ISd_Sp7xJEoAYCjHzwBeUvViUlQDjwb1yIZkuvpN1iEMCdpdTj15utWJi4KAkw_W1lUHW3ZBRN52FPFMGYLxwZVn9bzFk_g5Yyl_nCTs6QCeF8FnyAHP3-WM6nErSpgmh5t9pQbb8NPmx8e5Ig",
+          "width": 3120
+        }
+      ],
+      "place_id": "ChIJe_LirHyb3w8RF11tFvnQI8M",
+      "plus_code": {
+        "compound_code": "JRRF+62 Accra, Ghana",
+        "global_code": "6CQXJRRF+62"
+      },
+      "rating": 4.1,
+      "reference": "ChIJe_LirHyb3w8RF11tFvnQI8M",
+      "scope": "GOOGLE",
+      "types": [
+        "taxi_stand",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 172,
+      "vicinity": "1 La-Bawaleshi Road, Accra"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 5.678249999999998,
+          "lng": -0.1736086
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 5.679598980291501,
+            "lng": -0.172259619708498
+          },
+          "southwest": {
+            "lat": 5.676901019708496,
+            "lng": -0.174957580291502
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+      "name": "Zongo Junction Taxi Rank",
+      "photos": [
+        {
+          "height": 2304,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/101635997094514205601\">Shaibu Abdul Wadudu Y.K</a>"
+          ],
+          "photo_reference": "Aap_uEBel4xd4arZC4SI4Tq1sFJwkCMgTFmMp1LwQomRozCPHTKrQNh51Z3GVTflNyG4pdKEqOxyXQjPqTxHLsssoD3krgvuy7-CzjttMTqE4Q5ak6i6YbuS1NgsVMaJ7OxWuTNImzjpmZWM6xQXcukSugjB46TWMYl_4bKm6WyNty1rv63c",
+          "width": 4608
+        }
+      ],
+      "place_id": "ChIJf1gj7-Wc3w8R0Y0VC6aoxRU",
+      "plus_code": {
+        "compound_code": "MRHG+8H Madina, Ghana",
+        "global_code": "6CQXMRHG+8H"
+      },
+      "rating": 3.9,
+      "reference": "ChIJf1gj7-Wc3w8R0Y0VC6aoxRU",
+      "scope": "GOOGLE",
+      "types": [
+        "taxi_stand",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 82,
+      "vicinity": "604 New Road, Madina"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 5.6775641,
+          "lng": -0.1648968
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 5.678913030291502,
+            "lng": -0.163555669708498
+          },
+          "southwest": {
+            "lat": 5.676215069708498,
+            "lng": -0.166253630291502
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+      "name": "Taxi Rank",
+      "photos": [
+        {
+          "height": 600,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109679776011937734988\">Abu Safian Blay</a>"
+          ],
+          "photo_reference": "Aap_uEBV97PhhN7BGpQCC3Lc2Zy8Uhk04ePiSVbzscnG1H3lztX8Aj8iuopkpKlzMp0Z2nk3Tv7yq9a00dLidATwQe_Mo9r0SVDORMySA3dfUmWum9mK7A88aQhtYniVSpoGQ-nryougZaRQjY4DzLO5TUBZfzHZqJX9p7zP5JbNaf8PgdiB",
+          "width": 800
+        }
+      ],
+      "place_id": "ChIJWX-3y9yc3w8RL1JMvWqqKPE",
+      "rating": 3.9,
+      "reference": "ChIJWX-3y9yc3w8RL1JMvWqqKPE",
+      "scope": "GOOGLE",
+      "types": [
+        "taxi_stand",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 41,
+      "vicinity": "MRHP+22H, Madina"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 5.6675491,
+          "lng": -0.2050816
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 5.668869230291502,
+            "lng": -0.203732819708498
+          },
+          "southwest": {
+            "lat": 5.666171269708498,
+            "lng": -0.206430780291502
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+      "name": "Ecomog Taxi Station",
+      "place_id": "ChIJbx09EECc3w8RqpFB6JjvYDY",
+      "plus_code": {
+        "compound_code": "MQ9V+2X Haatso, Ghana",
+        "global_code": "6CQXMQ9V+2X"
+      },
+      "rating": 3.7,
+      "reference": "ChIJbx09EECc3w8RqpFB6JjvYDY",
+      "scope": "GOOGLE",
+      "types": [
+        "taxi_stand",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 7,
+      "vicinity": "Haatso-Atomic Road, Haatso"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 5.6678864,
+          "lng": -0.2144684
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 5.669254080291501,
+            "lng": -0.2132059697084979
+          },
+          "southwest": {
+            "lat": 5.666556119708497,
+            "lng": -0.215903930291502
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+      "name": "Asore Junction",
+      "place_id": "ChIJZcEkRj2c3w8RC2gAkIniInU",
+      "plus_code": {
+        "compound_code": "MQ9P+56 Accra, Ghana",
+        "global_code": "6CQXMQ9P+56"
+      },
+      "rating": 3.2,
+      "reference": "ChIJZcEkRj2c3w8RC2gAkIniInU",
+      "scope": "GOOGLE",
+      "types": [
+        "taxi_stand",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 10,
+      "vicinity": "Accra"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 5.653004999999999,
+          "lng": -0.2164719
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 5.654354180291503,
+            "lng": -0.215131269708498
+          },
+          "southwest": {
+            "lat": 5.651656219708499,
+            "lng": -0.217829230291502
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+      "name": "Dome Pillar 2, Ohene Down Taxi Rank",
+      "photos": [
+        {
+          "height": 612,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100682878268804728477\">Dome Pillar 2 Taxi Rank</a>"
+          ],
+          "photo_reference": "Aap_uEDnUqCWBQQEmU5_wttT48VWDF80NuR9EKV4iAE1mwu_bB_LRE1XfrGdntnSm2dA04E2a8lMRyLqkMsH4_Se4bCUu3cMonKfVRxjSp4rVb2d1HFbKNsbAJvqvxBmYKwzYKwLvHOoy7qhGNl4EsYFKQYFI6zsMOLLPoiiMKqFU5Yq_K5g",
+          "width": 816
+        }
+      ],
+      "place_id": "ChIJ0dWfS3ud3w8Roq3Acod5-zA",
+      "plus_code": {
+        "compound_code": "MQ3M+6C Accra, Ghana",
+        "global_code": "6CQXMQ3M+6C"
+      },
+      "rating": 4,
+      "reference": "ChIJ0dWfS3ud3w8Roq3Acod5-zA",
+      "scope": "GOOGLE",
+      "types": [
+        "taxi_stand",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1,
+      "vicinity": "Pillar 2, Paradise Street, Accra"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 5.6844485,
+          "lng": -0.2105256
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 5.685900080291503,
+            "lng": -0.209174219708498
+          },
+          "southwest": {
+            "lat": 5.683202119708499,
+            "lng": -0.211872180291502
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+      "name": "Bohye Taxi Rank",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1920,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100483998082731292448\">ablode freedom</a>"
+          ],
+          "photo_reference": "Aap_uEDXXuG-L_X-4rObvCUt0MGKoHzCj-szLjZqY0H3y6Qu0ifUDoYEeZgZuBERn4LlnBnZMXt-_X2nVD5rM5RTA_DmydFUodi5K8qfP-7lP0UoQus93rHAO7FWeT6FtrF9kEYFfZg57sI6tS0zQ337_YlmxkeD-g_-nmfUPnR6oy6es6jt",
+          "width": 2560
+        }
+      ],
+      "place_id": "ChIJORlciDOc3w8R0r3BbfS6clQ",
+      "plus_code": {
+        "compound_code": "MQMQ+QQ Haatso, Ghana",
+        "global_code": "6CQXMQMQ+QQ"
+      },
+      "rating": 3.7,
+      "reference": "ChIJORlciDOc3w8R0r3BbfS6clQ",
+      "scope": "GOOGLE",
+      "types": [
+        "taxi_stand",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 117,
+      "vicinity": "Bohye Bohye taxi rank"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 5.698595999999998,
+          "lng": -0.189044
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 5.699951180291502,
+            "lng": -0.187684669708498
+          },
+          "southwest": {
+            "lat": 5.697253219708498,
+            "lng": -0.190382630291502
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+      "name": "Suncity Taxi Rank",
+      "photos": [
+        {
+          "height": 2988,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112800256254854813295\">daniel kissi</a>"
+          ],
+          "photo_reference": "Aap_uEAM9I90kKI3yTjJrndhleLocCDLrbY-ba-nOHsoHKhux_EbmnQ_7ZSSJCKGWigHbZka6MFrTnD_O12G3WU3ro3sQeuG59CW3Eyu4OCCFbbYHlRlz1jpu8p3ylFaNuehMFaB4-PmIU4LcL6B7ibaYhKc76OI4VFhitoIb2qMNDB2Jd6d",
+          "width": 5312
+        }
+      ],
+      "place_id": "ChIJHXAj1Ked3w8RF0ydlFdMHMY",
+      "rating": 3.9,
+      "reference": "ChIJHXAj1Ked3w8RF0ydlFdMHMY",
+      "scope": "GOOGLE",
+      "types": [
+        "taxi_stand",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 94,
+      "vicinity": "MRX6+C9P"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 5.699879,
+          "lng": -0.1661443
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 5.701229330291501,
+            "lng": -0.164794519708498
+          },
+          "southwest": {
+            "lat": 5.698531369708497,
+            "lng": -0.167492480291502
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+      "name": "Adenta Shopping Mall Taxi Rank",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1728,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/107320588930486009822\">Kojo Ferguson Saah</a>"
+          ],
+          "photo_reference": "Aap_uECk5wdkHgXWnly_1mouUW-yTPD76mxNhsVq_JMC7n9utn4lfyK_Pna0MymXE3BmPB-BWkCXryw5h4uRmfoFIjsfCHsVf2x679mknJ5i2H3gtqeEJXaVUutjC9zvdGSHEer9xZ6i-bR_zMmgQRX-0tn1vXWb5Lm0AwpSPCyzUU-GG5jY",
+          "width": 2880
+        }
+      ],
+      "place_id": "ChIJ6bi_Hj2d3w8RNzTxrbobqds",
+      "rating": 4.3,
+      "reference": "ChIJ6bi_Hj2d3w8RNzTxrbobqds",
+      "scope": "GOOGLE",
+      "types": [
+        "taxi_stand",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 4,
+      "vicinity": "MRXM+XG5, Adenta Municipality"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 5.685308,
+          "lng": -0.1376115
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 5.686605130291501,
+            "lng": -0.136306269708498
+          },
+          "southwest": {
+            "lat": 5.683907169708498,
+            "lng": -0.1390042302915021
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+      "name": "Lakeside Estates Taxi Service",
+      "photos": [
+        {
+          "height": 5248,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110423571410140005030\">Seth Fernando</a>"
+          ],
+          "photo_reference": "Aap_uECdQ-LbKA-PpEjO25osiOub3y-gzblGMiAl4CldHPBBgu0cK6HXHD-84YRi-VvoAoVHvNHFSsZ0cMkWr2MHkocf0u7YpMm31wfC0m_Ow-yNEJf7lbo5GMW5m8A8KiMGxC5xiI8mLQ5QzndGDWrslDgOIKUk_D-QeYghwNHU7Mb8i6dB",
+          "width": 2952
+        }
+      ],
+      "place_id": "ChIJ1Z9LuCeD3w8RxddBgjHsiXo",
+      "rating": 4,
+      "reference": "ChIJ1Z9LuCeD3w8RxddBgjHsiXo",
+      "scope": "GOOGLE",
+      "types": [
+        "taxi_stand",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 31,
+      "vicinity": "MVP6+4XC, Madina"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 5.647984899999999,
+          "lng": -0.236365
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 5.649333880291501,
+            "lng": -0.2350160197084979
+          },
+          "southwest": {
+            "lat": 5.646635919708496,
+            "lng": -0.237713980291502
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+      "name": "Dome Crossing, Taxi Rank",
+      "opening_hours": {
+        "open_now": true
+      },
+      "place_id": "ChIJZ0VQgQGf3w8R604nBPVkBjk",
+      "plus_code": {
+        "compound_code": "JQX7+5F Accra, Ghana",
+        "global_code": "6CQXJQX7+5F"
+      },
+      "rating": 4,
+      "reference": "ChIJZ0VQgQGf3w8R604nBPVkBjk",
+      "scope": "GOOGLE",
+      "types": [
+        "taxi_stand",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 27,
+      "vicinity": "Dome Road, Accra"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 5.667838000000001,
+          "lng": -0.2396125
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 5.669203380291503,
+            "lng": -0.238263169708498
+          },
+          "southwest": {
+            "lat": 5.666505419708498,
+            "lng": -0.240961130291502
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+      "name": "Taifa Burkina Taxi Rank",
+      "photos": [
+        {
+          "height": 4160,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/105148893343547769222\">Kabu Maxwell</a>"
+          ],
+          "photo_reference": "Aap_uEBxcIy5R02Di7DJvu_A6p7P5V_1QJuphYUD8QqdGsKmINd-Ur_SaHYJs3YGf4LRP0GHMzheUwCeCo7nS6JahX8_KPs0dZWKzsMBn624SUJ3J4IQVdsJxejDntDtJek_5sNdijoMH4pQz8Gm6cea5kTRt1o9SZGnDEV8YbCgKcgsklKr",
+          "width": 3120
+        }
+      ],
+      "place_id": "ChIJJ1Fs65We3w8REGm2Jp3w-yU",
+      "rating": 3.6,
+      "reference": "ChIJJ1Fs65We3w8REGm2Jp3w-yU",
+      "scope": "GOOGLE",
+      "types": [
+        "taxi_stand",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 296,
+      "vicinity": "MQ96+45J, Taifa"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 5.5910721,
+          "lng": -0.1811751
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 5.592400730291502,
+            "lng": -0.1797591197084979
+          },
+          "southwest": {
+            "lat": 5.589702769708498,
+            "lng": -0.182457080291502
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+      "name": "37 Taxi rank",
+      "place_id": "ChIJZcef3fCa3w8Rd-5zCVINfvE",
+      "plus_code": {
+        "compound_code": "HRR9+CG Accra, Ghana",
+        "global_code": "6CQXHRR9+CG"
+      },
+      "rating": 3.4,
+      "reference": "ChIJZcef3fCa3w8Rd-5zCVINfvE",
+      "scope": "GOOGLE",
+      "types": [
+        "taxi_stand",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 12,
+      "vicinity": "Liberation Road, Accra"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 5.6083706,
+          "lng": -0.1308893
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 5.609721480291502,
+            "lng": -0.129590169708498
+          },
+          "southwest": {
+            "lat": 5.607023519708497,
+            "lng": -0.132288130291502
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+      "name": "Penny Taxi Station",
+      "photos": [
+        {
+          "height": 600,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/116255998278958914589\">Patrick Keli Atitsogbui</a>"
+          ],
+          "photo_reference": "Aap_uEAJjqXb76sT4jRwatwSltwruexaLqCqy6Gxk2IAI7EpkC1XVnRNCRJ41Q8Rh09TW5YtsfWy9J1Tfn7bV05m7hjvTd_h9tb8-UeKfg7FR5-zWQnVyILwWwOTjSuawOJCLCUlwoBtDTsHJO05mGfkCe_TMdLb17cPizMdITGi6PQgZ6Rz",
+          "width": 800
+        }
+      ],
+      "place_id": "ChIJHzEfqOCE3w8R7yiFXab4XbY",
+      "plus_code": {
+        "compound_code": "JV59+8J Accra, Ghana",
+        "global_code": "6CQXJV59+8J"
+      },
+      "rating": 3.3,
+      "reference": "ChIJHzEfqOCE3w8R7yiFXab4XbY",
+      "scope": "GOOGLE",
+      "types": [
+        "taxi_stand",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 207,
+      "vicinity": "Accra"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 5.588940000000001,
+          "lng": -0.1800636
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 5.590154580291503,
+            "lng": -0.178745119708498
+          },
+          "southwest": {
+            "lat": 5.587456619708498,
+            "lng": -0.181443080291502
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+      "name": "Cab to Tema",
+      "photos": [
+        {
+          "height": 2560,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/108172974366346891152\">Amponsahh Erik</a>"
+          ],
+          "photo_reference": "Aap_uEAE8kOOzMDSt3ZbGiTKFoLKKJ3xqbdWtyqz-y-7ek7xsMz7E53Dm57HWEH3B09OEgtcfwGpBQHXRczZqwIKfXqo3ZFYbxVfpneqXJLtooF_j6QGuiOn_oYim3449BqX9RQQ1YuLWiD1P2xjPE9xOZeZIrD45mz4mh1uO5P_yREb-qvX",
+          "width": 1920
+        }
+      ],
+      "place_id": "ChIJabF4dvGa3w8Rk50hSZHSjAQ",
+      "plus_code": {
+        "compound_code": "HRQ9+HX Accra, Ghana",
+        "global_code": "6CQXHRQ9+HX"
+      },
+      "rating": 4.3,
+      "reference": "ChIJabF4dvGa3w8Rk50hSZHSjAQ",
+      "scope": "GOOGLE",
+      "types": [
+        "taxi_stand",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 11,
+      "vicinity": "59 Giffard Road, Accra"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 5.619139399999999,
+          "lng": -0.1148689
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 5.620486130291502,
+            "lng": -0.113520019708498
+          },
+          "southwest": {
+            "lat": 5.617788169708498,
+            "lng": -0.116217980291502
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+      "name": "Malik Taxi Rank",
+      "place_id": "ChIJkSrotwaF3w8RhiVR-5q1AZ4",
+      "plus_code": {
+        "compound_code": "JV9P+M3 Accra, Ghana",
+        "global_code": "6CQXJV9P+M3"
+      },
+      "rating": 3.9,
+      "reference": "ChIJkSrotwaF3w8RhiVR-5q1AZ4",
+      "scope": "GOOGLE",
+      "types": [
+        "taxi_stand",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 31,
+      "vicinity": "DN Uber Drv, Market High Street, Accra"
+    }
+  ],
+  "status": "OK"
+}

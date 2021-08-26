@@ -61,6 +61,13 @@ const Destination = ({
       </View>
       <View
         style={{
+          borderWidth: StyleSheet.hairlineWidth,
+          marginHorizontal: -15,
+          borderColor: '#DDD',
+        }}
+      />
+      <View
+        style={{
           flexDirection: 'row',
           alignItems: 'center',
         }}>
@@ -81,11 +88,16 @@ const Destination = ({
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#FFFFFF',
-    shadowColor: '#000000',
-    elevation: 2,
-    shadowRadius: 5,
-    shadowOpacity: 1.0,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
     padding: 15,
+    borderRadius: 5,
   },
   locationRow: {
     marginBottom: 10,

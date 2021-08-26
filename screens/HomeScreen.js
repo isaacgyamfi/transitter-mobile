@@ -13,6 +13,7 @@ import taxiPlaces from '../components/taxi-stations.json';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import axios from 'axios';
 import {useNavigation} from '@react-navigation/native';
+import CreateTrip from '../components/home/CreateTrip';
 
 const GOOGLE_MAP_API = 'AIzaSyC9xeODqchewcF9288HmvypjPNXM-MjExw';
 const GOOGLE_PACES_API_BASE_URL = 'https://maps.googleapis.com/maps/api/place';
@@ -33,7 +34,8 @@ export default function HomeScreen() {
   });
   const [showPredictions, setShowPredictions] = useState(false);
   const [predictions, setPredictions] = useState([]);
-  const [placeType, setPlaceType] = useState('taxi_station');
+  const [placeType, setPlaceType] = useState({key: '1'});
+  const [createTrip, setCreateTrip] = useState(false);
 
   const onChangeText = async () => {
     if (placeSearch.key.trim() === '') {
@@ -89,67 +91,84 @@ export default function HomeScreen() {
   const handlePlaceTypeSelection = () => {};
   return (
     <View style={styles.container}>
-      <Destination
-        currentLocation={userLocation}
-        value={placeSearch.key}
-        changeText={value => {
-          setPlaceSearch({key: value, predict: true});
-          onChangeText().then(r => console.log(r));
-        }}
-        showPredictions={showPredictions}
-        predictions={predictions}
-        onSelectedPrediction={handleSelectedPrediction}
-      />
-
-      <View style={{paddingVertical: 10}}>
-        <Text style={{fontSize: 18, fontWeight: '600'}}>See nearby</Text>
-      </View>
-      <View>
-        <FlatList
-          data={[
-            {name: 'Bus stops', icon: 'bus-stop'},
-            {name: 'Taxi stations', icon: 'taxi'},
-            {name: 'Bus stations', icon: 'bus-multiple'},
-          ]}
-          horizontal={true}
-          style={{alignSelf: 'center'}}
-          keyExtractor={item => item.name}
-          renderItem={({item, index}) => (
-            <View style={styles.nearbySelectorContainer}>
-              <TouchableOpacity
-                onPress={() => handlePlaceTypeSelection()}
-                style={[styles.nearbySelector]}>
-                <View
-                  style={{
-                    backgroundColor: 'green',
-                    width: 25,
-                    height: 25,
-                    borderRadius: 15,
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    position: 'absolute',
-                    right: 10,
-                    top: -5,
-                  }}>
-                  <Text style={{color: '#FFFFFF'}}>4</Text>
-                </View>
-                <View style={{justifyContent: 'center', alignItems: 'center'}}>
-                  <MaterialCommunityIcons
-                    name={item.icon}
-                    size={45}
-                    color={'#175FE0'}
-                  />
-                  <Text
-                    style={{fontSize: 14, fontWeight: '300', color: '#175FE0'}}>
-                    {item.name}
-                  </Text>
-                </View>
-              </TouchableOpacity>
-            </View>
+      <View
+        style={{
+          paddingHorizontal: 15,
+          flex: 4.5,
+        }}>
+        <View style={{paddingVertical: 15}}>
+          {createTrip ? (
+            <Destination
+              currentLocation={userLocation}
+              value={placeSearch.key}
+              changeText={value => {
+                setPlaceSearch({key: value, predict: true});
+                onChangeText().then(r => console.log(r));
+              }}
+              showPredictions={showPredictions}
+              predictions={predictions}
+              onSelectedPrediction={handleSelectedPrediction}
+            />
+          ) : (
+            <TouchableOpacity onPress={() => setCreateTrip(true)}>
+              <CreateTrip />
+            </TouchableOpacity>
           )}
-        />
+        </View>
+
+        <View style={{paddingVertical: 10}}>
+          <Text style={{fontSize: 18, fontWeight: '600', color: '#FFFFFF'}}>
+            See nearby
+          </Text>
+        </View>
+        <View>
+          <FlatList
+            data={[
+              {key: '1', name: 'Bus stops', icon: 'bus-stop'},
+              {key: '2', name: 'Taxi stations', icon: 'taxi'},
+              {key: '3', name: 'Bus stations', icon: 'bus-multiple'},
+            ]}
+            horizontal={true}
+            style={{alignSelf: 'center'}}
+            renderItem={({item, index}) => (
+              <View style={styles.nearbySelectorContainer}>
+                <TouchableOpacity
+                  onPress={() => handlePlaceTypeSelection(item.key)}
+                  style={[styles.nearbySelector]}>
+                  <View style={styles.nearbyBadge}>
+                    <Text style={{color: '#FFFFFF'}}>4</Text>
+                  </View>
+                  <View
+                    style={{justifyContent: 'center', alignItems: 'center'}}>
+                    <MaterialCommunityIcons
+                      name={item.icon}
+                      size={45}
+                      color={'#FFF'}
+                    />
+                    <Text
+                      style={{
+                        fontSize: 14,
+                        fontWeight: 'bold',
+                        color: '#FFF',
+                      }}>
+                      {item.name}
+                    </Text>
+                  </View>
+                </TouchableOpacity>
+              </View>
+            )}
+          />
+        </View>
       </View>
-      <View>
+      <View
+        style={{
+          paddingTop: 20,
+          borderTopLeftRadius: 30,
+          borderTopRightRadius: 30,
+          backgroundColor: '#FFFFFF',
+          paddingHorizontal: 15,
+          flex: 5,
+        }}>
         {/*<ScrollView style={{background: 'transparent'}} horizontal={true} showsHorizontalScrollIndicator={false}>*/}
         <FlatList
           data={samplePlaces}
@@ -161,10 +180,17 @@ export default function HomeScreen() {
             <View style={{padding: 5}}>
               <View style={styles.locationCard}>
                 <View>
-                  <Text style={{fontWeight: '600', fontSize: 18}}>
+                  <Text style={{fontWeight: '600', fontSize: 22}}>
                     {item.name}
                   </Text>
-                  <Text>Taxi</Text>
+                  <Text style={{fontSize: 18, color: 'gray'}}>Taxi</Text>
+                </View>
+                <View>
+                  <Text style={{fontSize: 15, fontWeight: '600'}}>
+                    Walking:
+                  </Text>
+                  <Text style={{fontSize: 16}}>Distance</Text>
+                  <Text style={{fontSize: 16}}>Duration</Text>
                 </View>
                 <TouchableOpacity
                   onPress={() =>
@@ -186,9 +212,8 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#FFFFFF',
-    paddingHorizontal: 15,
-    paddingTop: 40,
+    backgroundColor: '#092D6C',
+    paddingTop: 30,
     flex: 1,
   },
   map: {
@@ -200,16 +225,18 @@ const styles = StyleSheet.create({
     width: (1.5 * Dimensions.get('window').width) / 5,
     padding: 5,
   },
+  nearbyBadge: {
+    backgroundColor: 'green',
+    width: 25,
+    height: 25,
+    borderRadius: 15,
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'absolute',
+    right: 10,
+    top: -5,
+  },
   nearbySelector: {
-    backgroundColor: '#FFFFFF',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
     padding: 12,
   },
   locationCard: {
@@ -230,7 +257,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   locationCardBtn: {
-    backgroundColor: '#175FE0',
+    backgroundColor: '#092D6C',
     padding: 10,
     borderRadius: 3,
   },

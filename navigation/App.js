@@ -5,7 +5,11 @@ import StationScreen from '../screens/StationScreen';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import PlacesScreen from '../screens/PlacesScreen';
+import UpdateScreen from '../screens/UpdateScreen';
+import NotificationsScreen from '../screens/NotificationsScreen';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const Stack = createStackNavigator();
 const BottomTab = createBottomTabNavigator();
@@ -29,7 +33,7 @@ function HomeStack() {
 
 function BottomTabNavigation() {
   return (
-    <BottomTab.Navigator tabBarOptions={{activeTintColor: '#175FE0'}}>
+    <BottomTab.Navigator tabBarOptions={{activeTintColor: '#092D6C'}}>
       <BottomTab.Screen
         name={'Home'}
         component={HomeStack}
@@ -49,6 +53,24 @@ function BottomTabNavigation() {
               size={30}
               color={color}
             />
+          ),
+        }}
+      />
+      <BottomTab.Screen
+        name={'Updates'}
+        component={UpdateScreen}
+        options={{
+          tabBarIcon: ({color}) => (
+            <FontAwesome name={'newspaper-o'} size={30} color={color} />
+          ),
+        }}
+      />
+      <BottomTab.Screen
+        name={'NotificationsScreen'}
+        component={NotificationsScreen}
+        options={{
+          tabBarIcon: ({color}) => (
+            <Ionicons name={'notifications-outline'} size={30} color={color} />
           ),
         }}
       />

@@ -14,6 +14,11 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import axios from 'axios';
 import {useNavigation} from '@react-navigation/native';
 import CreateTrip from '../components/home/CreateTrip';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import {stationStyles} from '../styles/station';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import {TaxiVerificationModal} from '../layout/TaxiVerificationModal';
+import {TaxiRequestModal} from '../layout/TaxiRequestModal';
 
 const GOOGLE_MAP_API = 'AIzaSyC9xeODqchewcF9288HmvypjPNXM-MjExw';
 const GOOGLE_PACES_API_BASE_URL = 'https://maps.googleapis.com/maps/api/place';
@@ -35,7 +40,8 @@ export default function HomeScreen() {
   const [showPredictions, setShowPredictions] = useState(false);
   const [predictions, setPredictions] = useState([]);
   const [placeType, setPlaceType] = useState({key: '1'});
-  const [createTrip, setCreateTrip] = useState(false);
+  const [openVerificationModal, setOpenVerificationModal] = useState(false);
+  const [openRequestModal, setOpenRequestModal] = useState(false);
 
   const onChangeText = async () => {
     if (placeSearch.key.trim() === '') {
@@ -91,74 +97,125 @@ export default function HomeScreen() {
   const handlePlaceTypeSelection = () => {};
   return (
     <View style={styles.container}>
+      <TaxiVerificationModal
+        isVisible={openVerificationModal}
+        closeModal={setOpenVerificationModal}
+      />
+      <TaxiRequestModal
+        isVisible={openRequestModal}
+        closeModal={setOpenRequestModal}
+      />
       <View
         style={{
           paddingHorizontal: 15,
           flex: 4.5,
         }}>
-        <View style={{paddingVertical: 15}}>
-          {createTrip ? (
-            <Destination
-              currentLocation={userLocation}
-              value={placeSearch.key}
-              changeText={value => {
-                setPlaceSearch({key: value, predict: true});
-                onChangeText().then(r => console.log(r));
-              }}
-              showPredictions={showPredictions}
-              predictions={predictions}
-              onSelectedPrediction={handleSelectedPrediction}
-            />
-          ) : (
-            <TouchableOpacity onPress={() => setCreateTrip(true)}>
-              <CreateTrip />
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+          <View>
+            <Text style={{color: '#FFFFFF', fontSize: 20, fontWeight: 'bold'}}>
+              Good morning
+            </Text>
+            <Text style={{color: '#FFFFFF', fontSize: 30, fontWeight: 'bold'}}>
+              Isaac
+            </Text>
+          </View>
+          <View
+            style={{
+              borderWidth: 2,
+              borderColor: '#FFFFFF',
+              borderRadius: 25,
+              height: 50,
+              width: 50,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
+            <MaterialIcons name={'person'} color={'#FFFFFF'} size={35} />
+          </View>
+        </View>
+        <View style={{paddingTop: 40}}>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'space-around',
+              marginBottom: 30,
+            }}>
+            <TouchableOpacity
+              onPress={() => setOpenVerificationModal(true)}
+              style={stationStyles.callToActionBtn}>
+              <MaterialIcons
+                name={'verified-user'}
+                size={25}
+                color={'#092D6C'}
+              />
+              <Text style={stationStyles.callToActionBtnText}>Verify taxi</Text>
             </TouchableOpacity>
-          )}
-        </View>
+            <TouchableOpacity
+              onPress={() => setOpenRequestModal(true)}
+              style={stationStyles.callToActionBtn}>
+              <MaterialIcons name={'person-pin'} size={25} color={'#092D6C'} />
 
-        <View style={{paddingVertical: 10}}>
-          <Text style={{fontSize: 18, fontWeight: '600', color: '#FFFFFF'}}>
-            See nearby
-          </Text>
-        </View>
-        <View>
-          <FlatList
-            data={[
-              {key: '1', name: 'Bus stops', icon: 'bus-stop'},
-              {key: '2', name: 'Taxi stations', icon: 'taxi'},
-              {key: '3', name: 'Bus stations', icon: 'bus-multiple'},
-            ]}
-            horizontal={true}
-            style={{alignSelf: 'center'}}
-            renderItem={({item, index}) => (
-              <View style={styles.nearbySelectorContainer}>
-                <TouchableOpacity
-                  onPress={() => handlePlaceTypeSelection(item.key)}
-                  style={[styles.nearbySelector]}>
-                  <View style={styles.nearbyBadge}>
-                    <Text style={{color: '#FFFFFF'}}>4</Text>
-                  </View>
-                  <View
-                    style={{justifyContent: 'center', alignItems: 'center'}}>
-                    <MaterialCommunityIcons
-                      name={item.icon}
-                      size={45}
-                      color={'#FFF'}
-                    />
-                    <Text
-                      style={{
-                        fontSize: 14,
-                        fontWeight: 'bold',
-                        color: '#FFF',
-                      }}>
-                      {item.name}
-                    </Text>
-                  </View>
-                </TouchableOpacity>
-              </View>
-            )}
+              <Text style={stationStyles.callToActionBtnText}>
+                Request pick-up
+              </Text>
+            </TouchableOpacity>
+          </View>
+          <Destination
+            currentLocation={userLocation}
+            value={placeSearch.key}
+            changeText={value => {
+              setPlaceSearch({key: value, predict: true});
+              onChangeText().then(r => console.log(r));
+            }}
+            showPredictions={showPredictions}
+            predictions={predictions}
+            onSelectedPrediction={handleSelectedPrediction}
           />
         </View>
+
+        {/*<View style={{paddingVertical: 10}}>*/}
+        {/*  <Text style={{fontSize: 18, fontWeight: '600', color: '#FFFFFF'}}>*/}
+        {/*    See nearby*/}
+        {/*  </Text>*/}
+        {/*</View>*/}
+        {/*<View>*/}
+        {/*  <FlatList*/}
+        {/*    data={[*/}
+        {/*      {key: '1', name: 'Bus stops', icon: 'bus-stop'},*/}
+        {/*      {key: '2', name: 'Taxi stations', icon: 'taxi'},*/}
+        {/*      {key: '3', name: 'Bus stations', icon: 'bus-multiple'},*/}
+        {/*    ]}*/}
+        {/*    horizontal={true}*/}
+        {/*    style={{alignSelf: 'center'}}*/}
+        {/*    renderItem={({item, index}) => (*/}
+        {/*      <View style={styles.nearbySelectorContainer}>*/}
+        {/*        <TouchableOpacity*/}
+        {/*          onPress={() => handlePlaceTypeSelection(item.key)}*/}
+        {/*          style={[styles.nearbySelector]}>*/}
+        {/*          <View style={styles.nearbyBadge}>*/}
+        {/*            <Text style={{color: '#FFFFFF'}}>4</Text>*/}
+        {/*          </View>*/}
+        {/*          <View*/}
+        {/*            style={{justifyContent: 'center', alignItems: 'center'}}>*/}
+        {/*            <MaterialCommunityIcons*/}
+        {/*              name={item.icon}*/}
+        {/*              size={40}*/}
+        {/*              color={'#FFF'}*/}
+        {/*            />*/}
+        {/*            <Text*/}
+        {/*              style={{*/}
+        {/*                fontSize: 12,*/}
+        {/*                fontWeight: 'bold',*/}
+        {/*                color: '#FFF',*/}
+        {/*              }}>*/}
+        {/*              {item.name}*/}
+        {/*            </Text>*/}
+        {/*          </View>*/}
+        {/*        </TouchableOpacity>*/}
+        {/*      </View>*/}
+        {/*    )}*/}
+        {/*  />*/}
+        {/*</View>*/}
       </View>
       <View
         style={{
@@ -167,8 +224,27 @@ export default function HomeScreen() {
           borderTopRightRadius: 30,
           backgroundColor: '#FFFFFF',
           paddingHorizontal: 15,
-          flex: 5,
+          flex: 3,
         }}>
+        <View
+          style={{
+            paddingHorizontal: 5,
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}>
+          <Text style={{fontSize: 16}}>Taxi stations nearby</Text>
+          <TouchableOpacity
+            style={{
+              borderWidth: 1,
+              borderColor: '#092D6C',
+              paddingVertical: 5,
+              paddingHorizontal: 8,
+              borderRadius: 20,
+            }}>
+            <Text style={{color: '#092D6C'}}>Refresh</Text>
+          </TouchableOpacity>
+        </View>
         {/*<ScrollView style={{background: 'transparent'}} horizontal={true} showsHorizontalScrollIndicator={false}>*/}
         <FlatList
           data={samplePlaces}
@@ -180,17 +256,13 @@ export default function HomeScreen() {
             <View style={{padding: 5}}>
               <View style={styles.locationCard}>
                 <View>
-                  <Text style={{fontWeight: '600', fontSize: 22}}>
+                  <Text style={{fontWeight: '600', fontSize: 20}}>
                     {item.name}
                   </Text>
-                  <Text style={{fontSize: 18, color: 'gray'}}>Taxi</Text>
-                </View>
-                <View>
-                  <Text style={{fontSize: 15, fontWeight: '600'}}>
-                    Walking:
+                  <Text style={{fontSize: 15, color: 'gray'}}>Taxi</Text>
+                  <Text style={{fontSize: 16, color: 'gray', marginTop: 5}}>
+                    {item.vicinity}
                   </Text>
-                  <Text style={{fontSize: 16}}>Distance</Text>
-                  <Text style={{fontSize: 16}}>Duration</Text>
                 </View>
                 <TouchableOpacity
                   onPress={() =>
@@ -252,7 +324,7 @@ const styles = StyleSheet.create({
     elevation: 5,
     backgroundColor: '#FFFFFF',
     flexDirection: 'column',
-    height: Dimensions.get('window').height / 3,
+    height: Dimensions.get('window').height / 4,
     width: (2 * Dimensions.get('window').width) / 3,
     justifyContent: 'space-between',
   },

@@ -56,7 +56,7 @@ export const stationStyles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     elevation: 6,
     borderRadius: 30,
-    marginLeft: 10,
+    // marginLeft: 10,
   },
   callToActionBtnText: {
     color: '#092D6C',

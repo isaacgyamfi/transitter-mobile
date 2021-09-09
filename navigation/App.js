@@ -39,7 +39,7 @@ function BottomTabNavigation() {
         component={HomeStack}
         options={{
           tabBarIcon: ({color}) => (
-            <Icon name={'home-map-marker'} size={30} color={color} />
+            <Icon name={'home-map-marker'} size={25} color={color} />
           ),
         }}
       />
@@ -50,7 +50,7 @@ function BottomTabNavigation() {
           tabBarIcon: ({color}) => (
             <MaterialIcons
               name={'transfer-within-a-station'}
-              size={30}
+              size={25}
               color={color}
             />
           ),
@@ -61,16 +61,16 @@ function BottomTabNavigation() {
         component={UpdateScreen}
         options={{
           tabBarIcon: ({color}) => (
-            <FontAwesome name={'newspaper-o'} size={30} color={color} />
+            <FontAwesome name={'newspaper-o'} size={22} color={color} />
           ),
         }}
       />
       <BottomTab.Screen
-        name={'NotificationsScreen'}
+        name={'Notifications'}
         component={NotificationsScreen}
         options={{
           tabBarIcon: ({color}) => (
-            <Ionicons name={'notifications-outline'} size={30} color={color} />
+            <Ionicons name={'notifications-outline'} size={25} color={color} />
           ),
         }}
       />

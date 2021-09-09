@@ -44,7 +44,7 @@ export default function StationScreen({route, navigation}) {
             style={{
               flexDirection: 'row',
               alignItems: 'center',
-              justifyContent: 'center',
+              justifyContent: 'space-evenly',
               marginTop: 15,
             }}>
             <TouchableOpacity style={stationStyles.callBtn}>

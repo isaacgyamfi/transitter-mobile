@@ -8,11 +8,12 @@ import {
   View,
 } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import {homeStyles} from '../styles/home';
 
 export function TaxiRequestModal({isVisible, closeModal}) {
   return (
     <Modal
-      style={{backgroundColor: '#FFFFFF', padding: 15}}
+      style={{backgroundColor: '#FFFFFF', padding: 20}}
       isVisible={isVisible}
       animationInTiming={400}
       animationOutTiming={500}>
@@ -26,7 +27,7 @@ export function TaxiRequestModal({isVisible, closeModal}) {
           <Text style={{fontSize: 30, fontWeight: 'bold'}}>
             Request for taxi pick-up
           </Text>
-          <Text style={{fontSize: 18, marginTop: 15}}>
+          <Text style={{fontSize: 16, marginTop: 15}}>
             Request for a charter(drop-in) or signal to join a vehicle with
             available space
           </Text>
@@ -69,14 +70,7 @@ function DestinationComponent(
         />
       </View>
       <View>
-        <TouchableOpacity
-          style={{
-            backgroundColor: '#092D6C',
-            paddingVertical: 15,
-            justifyContent: 'center',
-            alignItems: 'center',
-            borderRadius: 30,
-          }}>
+        <TouchableOpacity style={homeStyles.touchableBtn}>
           <Text style={{color: '#FFFFFF', fontSize: 18}}>Request</Text>
         </TouchableOpacity>
       </View>

@@ -112,25 +112,14 @@ export default function HomeScreen() {
         }}>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <View>
-            <Text style={{color: '#FFFFFF', fontSize: 20, fontWeight: 'bold'}}>
-              Good morning
-            </Text>
-            <Text style={{color: '#FFFFFF', fontSize: 30, fontWeight: 'bold'}}>
+            <Text style={{color: '#FFFFFF', fontSize: 22}}>Good morning</Text>
+            <Text style={{color: '#FFFFFF', fontSize: 28, fontWeight: 'bold'}}>
               Isaac
             </Text>
           </View>
-          <View
-            style={{
-              borderWidth: 2,
-              borderColor: '#FFFFFF',
-              borderRadius: 25,
-              height: 50,
-              width: 50,
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}>
-            <MaterialIcons name={'person'} color={'#FFFFFF'} size={35} />
-          </View>
+          <TouchableOpacity style={styles.userAccountBtn}>
+            <MaterialIcons name={'person'} color={'#FFFFFF'} size={30} />
+          </TouchableOpacity>
         </View>
         <View style={{paddingTop: 40}}>
           <View
@@ -287,6 +276,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#092D6C',
     paddingTop: 30,
     flex: 1,
+  },
+  userAccountBtn: {
+    borderWidth: 1,
+    borderColor: '#FFFFFF',
+    borderRadius: 25,
+    height: 45,
+    width: 45,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   map: {
     width: Dimensions.get('window').width,

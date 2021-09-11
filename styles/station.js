@@ -60,7 +60,7 @@ export const stationStyles = StyleSheet.create({
   },
   callToActionBtnText: {
     color: '#092D6C',
-    fontSize: 18,
+    fontSize: 16,
     marginLeft: 5,
   },
   destinationCard: {

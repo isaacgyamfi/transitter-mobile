@@ -6,10 +6,11 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import PlacesScreen from '../screens/PlacesScreen';
 import UpdateScreen from '../screens/UpdateScreen';
-import NotificationsScreen from '../screens/NotificationsScreen';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import {TaxiVerificationScreen} from '../screens/TaxiVerificationScreen';
+import {AuthContext} from '../context/authContext';
+import {useContext} from 'react';
+import LoginScreen from '../screens/Auth/LoginScreen';
 
 const Stack = createStackNavigator();
 const BottomTab = createBottomTabNavigator();
@@ -44,14 +45,15 @@ function BottomTabNavigation() {
         }}
       />
       <BottomTab.Screen
-        name={'Station'}
-        component={PlacesScreen}
+        name={'Verify taxi'}
+        component={TaxiVerificationScreen}
         options={{
           tabBarIcon: ({color}) => (
             <MaterialIcons
-              name={'transfer-within-a-station'}
-              size={25}
-              color={color}
+              style={{marginTop: -20}}
+              name={'verified-user'}
+              size={40}
+              color={'#092D6C'}
             />
           ),
         }}
@@ -65,19 +67,11 @@ function BottomTabNavigation() {
           ),
         }}
       />
-      <BottomTab.Screen
-        name={'Notifications'}
-        component={NotificationsScreen}
-        options={{
-          tabBarIcon: ({color}) => (
-            <Ionicons name={'notifications-outline'} size={25} color={color} />
-          ),
-        }}
-      />
     </BottomTab.Navigator>
   );
 }
 
 export default function MainApp() {
-  return <BottomTabNavigation />;
+  const {authToken} = useContext(AuthContext);
+  return <>{!authToken ? <LoginScreen /> : <BottomTabNavigation />}</>;
 }

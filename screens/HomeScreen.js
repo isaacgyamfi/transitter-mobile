@@ -1,24 +1,19 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {
   Dimensions,
   FlatList,
+  Image,
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
 } from 'react-native';
-import MapView from 'react-native-maps';
 import Destination from '../components/Destination';
 import taxiPlaces from '../components/taxi-stations.json';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import axios from 'axios';
 import {useNavigation} from '@react-navigation/native';
-import CreateTrip from '../components/home/CreateTrip';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import {stationStyles} from '../styles/station';
-import Icon from 'react-native-vector-icons/MaterialIcons';
-import {TaxiVerificationModal} from '../layout/TaxiVerificationModal';
-import {TaxiRequestModal} from '../layout/TaxiRequestModal';
+import {AuthContext} from '../context/authContext';
 
 const GOOGLE_MAP_API = 'AIzaSyC9xeODqchewcF9288HmvypjPNXM-MjExw';
 const GOOGLE_PACES_API_BASE_URL = 'https://maps.googleapis.com/maps/api/place';
@@ -26,6 +21,8 @@ const GOOGLE_PACES_API_BASE_URL = 'https://maps.googleapis.com/maps/api/place';
 const samplePlaces = taxiPlaces.results;
 
 export default function HomeScreen() {
+  const {getUserProfile} = useContext(AuthContext);
+
   const navigation = useNavigation();
   const [userLocation, setUserLocation] = useState({
     longitude: -0.1776037,
@@ -39,9 +36,12 @@ export default function HomeScreen() {
   });
   const [showPredictions, setShowPredictions] = useState(false);
   const [predictions, setPredictions] = useState([]);
-  const [placeType, setPlaceType] = useState({key: '1'});
-  const [openVerificationModal, setOpenVerificationModal] = useState(false);
-  const [openRequestModal, setOpenRequestModal] = useState(false);
+  const [user, setUser] = useState({});
+
+  useEffect(() => {
+    getUserProfile();
+    console.log(getUserProfile());
+  }, [user]);
 
   const onChangeText = async () => {
     if (placeSearch.key.trim() === '') {
@@ -97,58 +97,24 @@ export default function HomeScreen() {
   const handlePlaceTypeSelection = () => {};
   return (
     <View style={styles.container}>
-      <TaxiVerificationModal
-        isVisible={openVerificationModal}
-        closeModal={setOpenVerificationModal}
-      />
-      <TaxiRequestModal
-        isVisible={openRequestModal}
-        closeModal={setOpenRequestModal}
-      />
       <View
         style={{
           paddingHorizontal: 15,
-          flex: 4.5,
+          flex: 3,
         }}>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <View>
             <Text style={{color: '#FFFFFF', fontSize: 22}}>Good morning</Text>
             <Text style={{color: '#FFFFFF', fontSize: 28, fontWeight: 'bold'}}>
+              {/*{user['user profile'].givenName}*/}
               Isaac
             </Text>
           </View>
           <TouchableOpacity style={styles.userAccountBtn}>
-            <MaterialIcons name={'person'} color={'#FFFFFF'} size={30} />
+            <MaterialIcons name={'notifications'} color={'#FFFFFF'} size={30} />
           </TouchableOpacity>
         </View>
         <View style={{paddingTop: 40}}>
-          <View
-            style={{
-              flexDirection: 'row',
-              alignItems: 'center',
-              justifyContent: 'space-around',
-              marginBottom: 30,
-            }}>
-            <TouchableOpacity
-              onPress={() => setOpenVerificationModal(true)}
-              style={stationStyles.callToActionBtn}>
-              <MaterialIcons
-                name={'verified-user'}
-                size={25}
-                color={'#092D6C'}
-              />
-              <Text style={stationStyles.callToActionBtnText}>Verify taxi</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => setOpenRequestModal(true)}
-              style={stationStyles.callToActionBtn}>
-              <MaterialIcons name={'person-pin'} size={25} color={'#092D6C'} />
-
-              <Text style={stationStyles.callToActionBtnText}>
-                Request pick-up
-              </Text>
-            </TouchableOpacity>
-          </View>
           <Destination
             currentLocation={userLocation}
             value={placeSearch.key}
@@ -161,50 +127,6 @@ export default function HomeScreen() {
             onSelectedPrediction={handleSelectedPrediction}
           />
         </View>
-
-        {/*<View style={{paddingVertical: 10}}>*/}
-        {/*  <Text style={{fontSize: 18, fontWeight: '600', color: '#FFFFFF'}}>*/}
-        {/*    See nearby*/}
-        {/*  </Text>*/}
-        {/*</View>*/}
-        {/*<View>*/}
-        {/*  <FlatList*/}
-        {/*    data={[*/}
-        {/*      {key: '1', name: 'Bus stops', icon: 'bus-stop'},*/}
-        {/*      {key: '2', name: 'Taxi stations', icon: 'taxi'},*/}
-        {/*      {key: '3', name: 'Bus stations', icon: 'bus-multiple'},*/}
-        {/*    ]}*/}
-        {/*    horizontal={true}*/}
-        {/*    style={{alignSelf: 'center'}}*/}
-        {/*    renderItem={({item, index}) => (*/}
-        {/*      <View style={styles.nearbySelectorContainer}>*/}
-        {/*        <TouchableOpacity*/}
-        {/*          onPress={() => handlePlaceTypeSelection(item.key)}*/}
-        {/*          style={[styles.nearbySelector]}>*/}
-        {/*          <View style={styles.nearbyBadge}>*/}
-        {/*            <Text style={{color: '#FFFFFF'}}>4</Text>*/}
-        {/*          </View>*/}
-        {/*          <View*/}
-        {/*            style={{justifyContent: 'center', alignItems: 'center'}}>*/}
-        {/*            <MaterialCommunityIcons*/}
-        {/*              name={item.icon}*/}
-        {/*              size={40}*/}
-        {/*              color={'#FFF'}*/}
-        {/*            />*/}
-        {/*            <Text*/}
-        {/*              style={{*/}
-        {/*                fontSize: 12,*/}
-        {/*                fontWeight: 'bold',*/}
-        {/*                color: '#FFF',*/}
-        {/*              }}>*/}
-        {/*              {item.name}*/}
-        {/*            </Text>*/}
-        {/*          </View>*/}
-        {/*        </TouchableOpacity>*/}
-        {/*      </View>*/}
-        {/*    )}*/}
-        {/*  />*/}
-        {/*</View>*/}
       </View>
       <View
         style={{
@@ -212,12 +134,12 @@ export default function HomeScreen() {
           borderTopLeftRadius: 30,
           borderTopRightRadius: 30,
           backgroundColor: '#FFFFFF',
-          paddingHorizontal: 15,
-          flex: 3,
+          // paddingHorizontal: 15,
+          flex: 4,
         }}>
         <View
           style={{
-            paddingHorizontal: 5,
+            paddingHorizontal: 20,
             flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'space-between',
@@ -238,30 +160,36 @@ export default function HomeScreen() {
         <FlatList
           data={samplePlaces}
           horizontal={true}
-          style={{paddingVertical: 5}}
+          style={{paddingVertical: 5, paddingHorizontal: 10}}
           showsHorizontalScrollIndicator={false}
           keyExtractor={item => item.place_id}
           renderItem={({item, index}) => (
             <View style={{padding: 5}}>
               <View style={styles.locationCard}>
-                <View>
-                  <Text style={{fontWeight: '600', fontSize: 20}}>
-                    {item.name}
-                  </Text>
-                  <Text style={{fontSize: 15, color: 'gray'}}>Taxi</Text>
-                  <Text style={{fontSize: 16, color: 'gray', marginTop: 5}}>
-                    {item.vicinity}
-                  </Text>
+                <Image
+                  source={require('../assets/images/sample-img.jpg')}
+                  style={{width: '100%', height: 120}}
+                />
+                <View style={{padding: 15}}>
+                  <View>
+                    <Text style={{fontWeight: '600', fontSize: 20}}>
+                      {item.name}
+                    </Text>
+                    <Text style={{fontSize: 15, color: 'gray'}}>Taxi</Text>
+                    <Text style={{fontSize: 16, color: 'gray', marginTop: 5}}>
+                      {item.vicinity}
+                    </Text>
+                  </View>
+                  <TouchableOpacity
+                    onPress={() =>
+                      navigation.navigate('Station', {place: item})
+                    }
+                    style={styles.locationCardBtn}>
+                    <Text style={{color: '#FFFFFF', textAlign: 'center'}}>
+                      OPEN
+                    </Text>
+                  </TouchableOpacity>
                 </View>
-                <TouchableOpacity
-                  onPress={() =>
-                    navigation.navigate('Station', {placeName: item.name})
-                  }
-                  style={styles.locationCardBtn}>
-                  <Text style={{color: '#FFFFFF', textAlign: 'center'}}>
-                    OPEN
-                  </Text>
-                </TouchableOpacity>
               </View>
             </View>
           )}
@@ -278,9 +206,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   userAccountBtn: {
-    borderWidth: 1,
-    borderColor: '#FFFFFF',
-    borderRadius: 25,
     height: 45,
     width: 45,
     justifyContent: 'center',
@@ -310,7 +235,6 @@ const styles = StyleSheet.create({
     padding: 12,
   },
   locationCard: {
-    padding: 15,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -322,7 +246,7 @@ const styles = StyleSheet.create({
     elevation: 5,
     backgroundColor: '#FFFFFF',
     flexDirection: 'column',
-    height: Dimensions.get('window').height / 4,
+    height: Dimensions.get('window').height / 2.7,
     width: (2 * Dimensions.get('window').width) / 3,
     justifyContent: 'space-between',
   },

@@ -1,12 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {FlatList, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import openMap, {createOpenLink} from 'react-native-open-maps';
 import {DestinationCard} from '../components/place/DestinationCard';
 import {stationStyles} from '../styles/station';
+import ComplaintScreen from './ComplaintScreen';
 export default function StationScreen({route, navigation}) {
-  const {placeName} = route.params;
+  const [modalVisible, setModalVisible] = useState(true);
+  const closeModal = () => setModalVisible(false);
+  const {place} = route.params;
   return (
-    <View style={{flex: 1}}>
+    <View style={{flex: 1, backgroundColor: '#FFF'}}>
+      <ComplaintScreen closeModal={closeModal} isVisible={modalVisible} />
       <View style={stationStyles.header}>
         <View
           style={{
@@ -27,7 +32,7 @@ export default function StationScreen({route, navigation}) {
         </View>
         <View style={{paddingHorizontal: 20, paddingBottom: 20}}>
           <View>
-            <Text style={{fontSize: 22, fontWeight: 'bold'}}>{placeName}</Text>
+            <Text style={{fontSize: 22, fontWeight: 'bold'}}>{place.name}</Text>
           </View>
           <View style={{marginVertical: 10}}>
             <Text style={{fontSize: 16}}>Accra, Greater Accra</Text>
@@ -44,20 +49,19 @@ export default function StationScreen({route, navigation}) {
             style={{
               flexDirection: 'row',
               alignItems: 'center',
-              justifyContent: 'space-evenly',
+              justifyContent: 'flex-start',
               marginTop: 15,
             }}>
             <TouchableOpacity style={stationStyles.callBtn}>
               <Icon name={'call'} size={25} color={'#FFFFFF'} />
+              <Text style={stationStyles.callBtnText}>Call</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={stationStyles.callToActionBtn}>
-              <Icon name={'person-pin'} size={25} color={'#092D6C'} />
-
-              <Text style={stationStyles.callToActionBtnText}>Request</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={stationStyles.callToActionBtn}>
+            <TouchableOpacity
+              onPress={() => {
+                setModalVisible(true);
+              }}
+              style={stationStyles.callToActionBtn}>
               <Icon name={'help-outline'} size={25} color={'#092D6C'} />
-
               <Text style={stationStyles.callToActionBtnText}>Complain</Text>
             </TouchableOpacity>
           </View>
@@ -80,25 +84,29 @@ export default function StationScreen({route, navigation}) {
               name: 'Madina',
               type: 'Junction',
               fare: 1.2,
-              stops: [
-                {
-                  key: '1',
-                  name: 'Atomic Roundabout',
-                  type: 'bus stop',
-                  vicinity: 'Accra',
-                },
-              ],
             },
-            {key: '2', name: 'Haatso', type: 'Junction', fare: 1.5, stops: []},
-            {key: '3', name: 'Spintex', type: 'Bus stop', fare: 1.8, stops: []},
-            {key: '4', name: 'Accra', type: 'Bus stop', fare: 1.8, stops: []},
-            {key: '5', name: 'Circle', type: 'Junction', fare: 2.0, stops: []},
+            {key: '2', name: 'Haatso', type: 'Junction', fare: 1.5},
+            {key: '3', name: 'Spintex', type: 'Bus stop', fare: 1.8},
+            {key: '4', name: 'Accra', type: 'Bus stop', fare: 1.8},
+            {key: '5', name: 'Circle', type: 'Junction', fare: 2.0},
           ]}
           renderItem={({item, index}) => <DestinationCard destination={item} />}
           showsVerticalScrollIndicator={false}
         />
       </View>
-      <TouchableOpacity style={stationStyles.floatingBtn}>
+      <TouchableOpacity
+        onPress={() =>
+          openMap({
+            latitude: place.geometry.location.lat,
+            longitude: place.geometry.location.lng,
+            navigate: true,
+            zoom: 18,
+            end: place.name,
+            endPlaceId: place.place_id,
+            travelType: 'walk',
+          })
+        }
+        style={stationStyles.floatingBtn}>
         <Icon name={'directions'} size={30} color={'#FFFFFF'} />
       </TouchableOpacity>
     </View>

@@ -14,7 +14,6 @@ export function DestinationCard({destination}) {
             justifyContent: 'space-between',
           }}>
           <Text style={{fontSize: 14, color: 'gray'}}>Junction</Text>
-          <Icon name={'keyboard-arrow-down'} color={'#092D6C'} size={25} />
         </View>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <Text style={{fontSize: 18, color: '#494949'}}>

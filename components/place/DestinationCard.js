@@ -5,7 +5,7 @@ import {stationStyles} from '../../styles/station';
 
 export function DestinationCard({destination}) {
   return (
-    <TouchableOpacity style={{marginVertical: 5}}>
+    <View style={{marginVertical: 5}}>
       <View style={stationStyles.destinationCard}>
         <View
           style={{
@@ -24,6 +24,6 @@ export function DestinationCard({destination}) {
           </Text>
         </View>
       </View>
-    </TouchableOpacity>
+    </View>
   );
 }

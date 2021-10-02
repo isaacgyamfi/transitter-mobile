@@ -154,6 +154,7 @@ export default function ComplaintScreen({isVisible, closeModal}) {
                       }}
                     />
                   </View>
+                  <Text style={{marginVertical: 5}}>Vehicle Registration</Text>
                   <View style={styles.registrationPicker}>
                     <View style={styles.miniPickerContainer}>
                       <View style={styles.miniPicker}>
@@ -255,8 +256,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
-    paddingVertical: 20,
-    marginTop: 5,
+    paddingVertical: 10,
   },
   miniPickerContainer: {
     flex: 3,

@@ -16,6 +16,7 @@ import {regionCode, year} from '../components/numberPlates';
 import {homeStyles} from '../styles/home';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import TaxiVerificationResult from '../components/home/TaxiVerificationResult';
+import axios from 'axios';
 
 export function TaxiVerificationScreen({isVisible, closeModal}) {
   const [taxiResult, setTaxiResult] = useState([]);
@@ -37,8 +38,16 @@ export function TaxiVerificationScreen({isVisible, closeModal}) {
       .required('Enter the year code'),
   });
 
-  const handleTaxiVerification = (values, actions) => {
+  const handleTaxiVerification = async (values, actions) => {
     console.log(values);
+    try {
+      const response = await axios.get(
+        `http://10.0.2.2:5000/taxis/${values.regionInitial}-${values.carNumber}-${values.year}`,
+      );
+      setTaxiResult(response.data.data);
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   return (
@@ -127,7 +136,7 @@ export function TaxiVerificationScreen({isVisible, closeModal}) {
       </Formik>
       <View style={styles.divider} />
       <View style={{width: '100%'}}>
-        {taxiResult.length !== 0 ? (
+        {!taxiResult ? (
           <View
             style={{
               backgroundColor: 'rgba(255, 0, 0, 0.25)',
@@ -140,7 +149,7 @@ export function TaxiVerificationScreen({isVisible, closeModal}) {
             </Text>
           </View>
         ) : taxiResult ? (
-          <TaxiVerificationResult />
+          <TaxiVerificationResult result={taxiResult} />
         ) : null}
       </View>
     </View>
@@ -156,14 +165,14 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   miniPickerContainer: {
-    flex: 3,
+    flex: 4,
     padding: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
   miniPicker: {
     height: 50,
-    width: '80%',
+    width: '100%',
     backgroundColor: '#DDDDDD',
   },
   numberPlateTextInput: {

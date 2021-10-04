@@ -1,12 +1,23 @@
-import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+  Linking,
+} from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import React from 'react';
+import React, {useState} from 'react';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import ComplaintScreen from '../../screens/ComplaintScreen';
 
-export default function TaxiVerificationResult() {
+export default function TaxiVerificationResult({result}) {
+  const [modalVisible, setModalVisible] = useState(false);
+  const closeModal = () => setModalVisible(false);
   return (
     <View>
+      <ComplaintScreen closeModal={closeModal} isVisible={modalVisible} />
       <View style={{marginBottom: 5}}>
         <Text style={{color: 'green'}}>Taxi found</Text>
       </View>
@@ -18,13 +29,17 @@ export default function TaxiVerificationResult() {
             justifyContent: 'space-between',
           }}>
           <View>
-            <Text style={{color: 'gray', fontSize: 20}}>Daewoo Matiz</Text>
+            <Text style={{color: 'gray', fontSize: 20}}>
+              {result.brand} {result.model}
+            </Text>
             <View style={{flexDirection: 'row'}}>
               <Text style={{fontSize: 16}}>Reg. No.: </Text>
-              <Text style={{fontWeight: 'bold', fontSize: 16}}>GR 1232 19</Text>
+              <Text style={{fontWeight: 'bold', fontSize: 16}}>
+                {result.registrationNumber}
+              </Text>
             </View>
             <View style={{marginTop: 5}}>
-              <Text style={{fontSize: 15}}>Legon Okponglo Taxi Station</Text>
+              <Text style={{fontSize: 15}}>{result.station.address.name}</Text>
             </View>
           </View>
           <View
@@ -33,9 +48,27 @@ export default function TaxiVerificationResult() {
               borderRadius: 2,
               borderWidth: StyleSheet.hairlineWidth,
             }}>
-            <View style={{width: 20, height: 20, backgroundColor: 'yellow'}} />
-            <View style={{width: 20, height: 20, backgroundColor: 'black'}} />
-            <View style={{width: 20, height: 20, backgroundColor: 'yellow'}} />
+            <View
+              style={{
+                width: 20,
+                height: 20,
+                backgroundColor: `${result.colorCode.fender}`,
+              }}
+            />
+            <View
+              style={{
+                width: 20,
+                height: 20,
+                backgroundColor: `${result.colorCode.doors}`,
+              }}
+            />
+            <View
+              style={{
+                width: 20,
+                height: 20,
+                backgroundColor: `${result.colorCode.fender}`,
+              }}
+            />
           </View>
         </View>
         <View
@@ -54,7 +87,7 @@ export default function TaxiVerificationResult() {
             </View>
             <View>
               <Text style={{fontWeight: '600', fontSize: 14}}>
-                Emmanuel Simpson
+                {result.driver.name}
               </Text>
               <View
                 style={{
@@ -72,7 +105,11 @@ export default function TaxiVerificationResult() {
               </View>
             </View>
           </View>
-          <TouchableOpacity style={styles.callBtn}>
+          <TouchableOpacity
+            onPress={() => {
+              Linking.openURL(`tel:${result.driver.phone}`);
+            }}
+            style={styles.callBtn}>
             <FontAwesome5 name={'phone-alt'} color={'#092D6C'} size={20} />
           </TouchableOpacity>
         </View>
@@ -90,7 +127,9 @@ export default function TaxiVerificationResult() {
           justifyContent: 'center',
           alignItems: 'center',
         }}>
-        <TouchableOpacity style={styles.reportTouchable}>
+        <TouchableOpacity
+          onPress={() => setModalVisible(true)}
+          style={styles.reportTouchable}>
           <MaterialIcons name={'help-outline'} size={20} color={'#092D6C'} />
           <Text
             style={{

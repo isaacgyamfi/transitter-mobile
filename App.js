@@ -6,16 +6,9 @@
  * @flow strict-local
  */
 
-import React, {useContext, useState} from 'react';
+import React from 'react';
 import type {Node} from 'react';
-import {
-  SafeAreaView,
-  StatusBar,
-  Text,
-  TouchableOpacity,
-  useColorScheme,
-  View,
-} from 'react-native';
+import {StatusBar} from 'react-native';
 
 import {NavigationContainer} from '@react-navigation/native';
 import LocationContextProvider from './context/locationContext';

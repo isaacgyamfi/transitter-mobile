@@ -6,7 +6,7 @@ import {DestinationCard} from '../components/place/DestinationCard';
 import {stationStyles} from '../styles/station';
 import ComplaintScreen from './ComplaintScreen';
 export default function StationScreen({route, navigation}) {
-  const [modalVisible, setModalVisible] = useState(true);
+  const [modalVisible, setModalVisible] = useState(false);
   const closeModal = () => setModalVisible(false);
   const {place} = route.params;
   return (
